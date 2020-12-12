@@ -147,7 +147,7 @@ h4{
 </style>
 
 
-</head>
+
 
 
 <body>
@@ -163,7 +163,7 @@ h4{
 <h2 style="margin-top: 30px; margin-left: 30px; font-family: Georgia, serif">All Categories</h2>
 <hr>
 
-<img src="grocery.png" style="margin-left: 150px; width: 325px; margin-top: 90px">
+<img src="grocery.PNG" style="margin-left: 150px; width: 325px; margin-top: 90px">
 <h4 style="margin-left: 225px; font-size: 35px"><u>GROCERY</u></h4>
 
 <ul class="groc">
