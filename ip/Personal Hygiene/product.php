@@ -2,7 +2,7 @@
 // Check to make sure the id parameter is specified in the URL
 if (isset($_GET['id'])) {
     // Prepare statement and execute, prevents SQL injection
-    $stmt = $pdo->prepare('SELECT * FROM dal WHERE id = ?');
+    $stmt = $pdo->prepare('SELECT * FROM personal WHERE id = ?');
     $stmt->execute([$_GET['id']]);
     // Fetch the product from the database and return the result as an Array
     $product = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -33,9 +33,6 @@ if (isset($_GET['id'])) {
             <input type="hidden" name="product_id" value="<?=$product['id']?>">
             <input type="submit" value="Add To Cart">
         </form>
-        <div class="description">
-            <?=$product['desc']?>
-        </div>
     </div>
 </div>
 
