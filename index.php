@@ -11,9 +11,12 @@ include("auth.php");
   <title>SGK</title>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <link rel="stylesheet" type="text/css" href="footer.css">
     <!-- <title>Responsive Mega Menu | CodingNepal</title> -->
 
-  <link rel="stylesheet" type="text/css" href="style.css">
   <style type="text/css">
     @media screen and (max-width:1500px){
   .video {
