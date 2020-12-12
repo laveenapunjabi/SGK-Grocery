@@ -33,9 +33,6 @@ if (isset($_GET['id'])) {
             <input type="hidden" name="product_id" value="<?=$product['id']?>">
             <input type="submit" value="Add To Cart">
         </form>
-        <div class="description">
-            <?=$product['desc']?>
-        </div>
     </div>
 </div>
 
