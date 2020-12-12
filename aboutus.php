@@ -17,11 +17,13 @@ include("auth.php");
   <link rel="stylesheet" type="text/css" href="footer.css">
    
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css" />
 
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.6/css/boxicons.min.css' rel='stylesheet">
+
 
 
 </head>
@@ -149,13 +151,6 @@ include("auth.php");
         <p class="footer-company-about">
           <span>About the SHOP</span>
           We provide different types of quality chakki fresh atta. We also provide quality products which is used by everyone in daily needs such as dals, pulses, spices, tea, soaps and many more items.</p>
-        <div class="footer-icons">
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-instagram"></i></a>
-          <a href="#"><i class="fa fa-linkedin"></i></a>
-          <a href="#"><i class="fa fa-youtube"></i></a>
-        </div>
       </div>
     </footer>
 </body>
