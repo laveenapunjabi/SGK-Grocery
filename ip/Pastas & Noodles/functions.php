@@ -28,7 +28,7 @@ echo <<<EOT
             <div class="content-wrapper">
                 <h1>SGK</h1>
                 <nav>
-                    <a href = "http://localhost/sample/index.php"><h1 style="text-decoration: none; color: white; font-size: 25px;">SGK</h1></a>
+                    <a href = "http://localhost/sample/index.php"><h1 style="text-decoration: none; color: white; font-size: 25px;">Home</h1></a>
                     <a href="index1.php">Categories</a>
                     
                 </nav>
