@@ -20,6 +20,7 @@ minimum-scale=1.0">
   <link rel="stylesheet" type="text/css" href="footer.css">
 
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css" />
 
 
@@ -37,7 +38,9 @@ minimum-scale=1.0">
       <input type="radio" name="slider" id="close-btn">
       <ul class="nav-links">
         <label for="close-btn" class="btn close-btn"><i class="fa fa-times"></i></label>
-        <p style="font-size: 22px;"><?php echo $_SESSION['name']; ?></p>
+        <li>
+          <a href="user_details.php" style="background-color: black; color: white; "><i class='fa fa-user-circle'></i></a>
+        </li>
         <li>
           <a href="logout.php" class="desktop-item">Logout</a>
         </li>
@@ -246,15 +249,10 @@ If you are on vacation, or can't pick it up within 5 days, you can contact our C
         <p class="footer-company-about">
           <span>About the SHOP</span>
           We provide different types of quality chakki fresh atta. We also provide quality products which is used by everyone in daily needs such as dals, pulses, spices, tea, soaps and many more items.</p>
-        <div class="footer-icons">
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-instagram"></i></a>
-          <a href="#"><i class="fa fa-linkedin"></i></a>
-          <a href="#"><i class="fa fa-youtube"></i></a>
-        </div>
       </div>
     </footer>
+
+    
 
 <script type="text/javascript">
   const items = document.querySelectorAll(".accordion a");
