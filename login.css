@@ -1,0 +1,83 @@
+body {
+  background-color: white;
+}
+
+
+#form_right {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 15px;
+  padding: 10px 5px;
+  width: 238px;
+}
+
+h1 {
+  margin-top: -120px;
+  margin-left: 600px;
+  font-size: 70px;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+}
+
+
+.input_container {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.input_container:hover {
+  background-color: #a6d0de;
+}
+
+.input_container,
+#input_submit {
+  margin-left: 550px;
+  height: 50px;
+  background-color: #cbd0d1;
+  border-radius: 30px;
+  width: 40%;
+}
+
+.input_field {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding-left: 30px;
+}
+
+input::placeholder {
+  color: black;
+}
+
+#input_submit {
+  background-color: blue;
+  padding-left: 0;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+}
+
+.log {
+  width: 20%;
+  margin-top: 15px;
+  border: none;
+  border-radius:15px;
+  margin-left: 640px;
+  font-size: 30px;
+  background-color: #2ca3de;
+  padding: 5px;
+}
+
+
+
+i {
+    color: var(--icon_color);
+}
+
+
+#account {
+  margin-left: 520px;
+  font-size: 25px;
+}

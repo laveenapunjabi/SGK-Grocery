@@ -1,0 +1,711 @@
+body {
+    height: auto;
+    /*background: #F4F7F8;*/
+    overflow: auto;
+    color: rgb(var(--color));
+    width: 100%;
+    color: #1c1a26;
+
+    
+}
+* {
+    list-style: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+nav{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 99;
+  width: 100%;
+  background: #1ea7eb;
+}
+nav .wrapper{
+  position: relative;
+  max-width: 1300px;
+  padding: 0px 0px;
+  height: 100px;
+  line-height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .logo a{
+  color: #f2f2f2;
+  font-size: 40px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.wrapper .nav-links{
+  display: inline-flex;
+}
+.nav-links li{
+  list-style: none;
+}
+.nav-links li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 9px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.nav-links li a:hover{
+  background: #3A3B3C;
+}
+.nav-links .mobile-item{
+  display: none;
+}
+.nav-links .drop-menu{
+  position: absolute;
+  background: #242526;
+  width: 180px;
+  line-height: 45px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+.nav-links li:hover .drop-menu,
+.nav-links li:hover .mega-box{
+  transition: all 0.3s ease;
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+.drop-menu li a{
+  width: 100%;
+  display: block;
+  padding: 0 0 0 15px;
+  font-weight: 400;
+  border-radius: 0px;
+}
+.mega-box{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0 30px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+}
+.mega-box .content{
+  background: #242526;
+  padding: 25px 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+.mega-box .content .row{
+  width: calc(25% - 30px);
+  line-height: 45px;
+}
+.content .row img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content .row header{
+  color: #f2f2f2;
+  font-size: 20px;
+  font-weight: 500;
+}
+.content .row .mega-links{
+  margin-left: -40px;
+  border-left: 1px solid rgba(255,255,255,0.09);
+}
+.row .mega-links li{
+  padding: 0 20px;
+}
+.row .mega-links li a{
+  padding: 0px;
+  padding: 0 20px;
+  color: #d9d9d9;
+  font-size: 17px;
+  display: block;
+}
+.row .mega-links li a:hover{
+  color: #f2f2f2;
+}
+.wrapper .btn{
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.wrapper .btn.close-btn{
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+
+@media screen and (max-width: 970px) {
+  nav .wrapper {
+    max-width: 400px;
+  }
+  .wrapper .btn{
+    display: block;
+  }
+  .wrapper .nav-links{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    top: 0;
+    left: -100%;
+    background: #242526;
+    display: block;
+    padding: 50px 10px;
+    line-height: 50px;
+    overflow-y: auto;
+    box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+    transition: all 0.3s ease;
+  }
+  /* custom scroll bar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #242526;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3A3B3C;
+  }
+  #menu-btn:checked ~ .nav-links{
+    left: 0%;
+  }
+  #menu-btn:checked ~ .btn.menu-btn{
+    display: none;
+  }
+  #close-btn:checked ~ .btn.menu-btn{
+    display: block;
+  }
+  .nav-links li{
+    margin: 15px 10px;
+  }
+  .nav-links li a{
+    padding: 0 20px;
+    display: block;
+    font-size: 20px;
+  }
+  .nav-links .drop-menu{
+    position: static;
+    opacity: 1;
+    top: 65px;
+    visibility: visible;
+    padding-left: 20px;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+  #showDrop:checked ~ .drop-menu,
+  #showMega:checked ~ .mega-box{
+    max-height: 100%;
+  }
+  .nav-links .desktop-item{
+    display: none;
+  }
+  .nav-links .mobile-item{
+    display: block;
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .nav-links .mobile-item:hover{
+    background: #3A3B3C;
+  }
+  .drop-menu li{
+    margin: 0;
+  }
+  .drop-menu li a{
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .mega-box{
+    position: static;
+    top: 65px;
+    opacity: 1;
+    visibility: visible;
+    padding: 0 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .mega-box .content{
+    box-shadow: none;
+    flex-direction: column;
+    padding: 20px 20px 0 20px;
+  }
+  .mega-box .content .row{
+    width: 100%;
+    margin-bottom: 15px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .mega-box .content .row:nth-child(1),
+  .mega-box .content .row:nth-child(2){
+    border-top: 0px;
+  }
+  .content .row .mega-links{
+    border-left: 0px;
+    padding-left: 15px;
+  }
+  .row .mega-links li{
+    margin: 0;
+  }
+  .content .row header{
+    font-size: 25px;
+  }
+}
+nav input{
+  display: none;
+}
+
+.body-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  padding: 0 30px;
+}
+.body-text div{
+  font-size: 45px;
+  font-weight: 600;
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+  margin-top: 50px;
+  margin-right:40px;
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: static;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+  
+}
+
+/*flex*/
+
+.container{
+  width:100%;
+  height: auto;
+  /*background:#ffffb3;*/
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-align:center;
+  flex-direction:row;
+}
+
+.box{
+  
+  width:270px;
+  height: 300px;
+  box-shadow: 0px 0px 7px 3px grey;
+  text-align: center;
+  margin:30px 30px;
+  transition:all 0.5s;
+  border-radius: 25px;
+  transition: transform .2s;
+  
+
+}
+.box:hover{
+  filter: brightness(1.2);
+  -ms-transform: scale(1.3); /* IE 9 */
+  -webkit-transform: scale(1.3); /* Safari 3-8 */
+  transform: scale(1.3); 
+}
+
+.btn-prod{
+  margin-left: 10px;
+  margin-top: 250px;
+  border-radius: 25px;
+  font-size: 20px;
+  padding: 10px;
+  width: 150px;
+  background: linear-gradient(147deg, #1a73e8  0%, #000080 );
+  color: white;
+}
+ 
+
+.btn-prod:hover{
+background: linear-gradient(147deg, #000080 0%, #1a73e8 );
+}
+
+.prod {
+  color: white;
+  text-decoration: none;
+}
+
+.bg1{
+  background:url("https://img2.exportersindia.com/product_images/bc-full/dir_174/5198785/wheat-flour-1508737546-3410055.jpeg") no-repeat center center;
+  background-size:cover;
+}
+
+
+.bg2{
+  background:url("https://spontaneousorder.in/wp-content/uploads/2018/08/gfsdfds.jpeg") no-repeat center center;
+  background-size: cover; 
+}
+
+.bg3{
+  background:url("https://img.etimg.com/thumb/msid-74452389,width-1200,height-900,imgsize-573232,overlay-etmarkets/photo.jpg") no-repeat center center;
+  background-size: cover; 
+}
+
+.bg4{
+  background:url("https://wallpaperaccess.com/full/1463517.jpg") no-repeat center center;
+  background-size: cover; 
+}
+.bg5{
+  background:url(https://www.grocyhub.com/image/cache/catalog/dairy_bakery/jams_spreads/mixed_fruit_jam/kissan-mixed-fruit-jam-700gm_1-800x800.jpg) no-repeat center center;
+  background-size: cover; 
+}
+
+/*.bg6{
+  background:url(rambanduchilli.jpg) no-repeat center center;
+  background-size: cover; 
+}*/
+
+.bg7{
+  background:url(https://4.imimg.com/data4/VY/SG/MY-4424214/everest-garam-masala-500x500.jpg) no-repeat center center;
+  background-size: cover; 
+}
+
+.bg8{
+  background:url(https://www.dove.com/content/dam/unilever/dove/saudi_arabia/static_not_in-use_products_/6281006473645-1618992-png.png) no-repeat center center;
+  background-size: cover; 
+}
+
+
+/*video*/
+
+.video {
+  margin-top: 30px;
+  margin-left: 160px;
+  width: 80%;
+  height: 500px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 7px 3px grey;
+  background: linear-gradient(147deg, #2e5894 , #75a1e0 );
+
+}
+
+iframe {
+  margin-top: -80px;
+  margin-right: 60px;
+  float: right;
+  width: 600px;
+  height: 350px;
+}
+.benefits{
+    margin-left: 30px;
+    margin-top: 80px;
+    font-size: 24px;
+    color: white;
+  }
+
+
+  
+/*feedback*/
+
+.feedback {
+  width: 90%;
+  height: 300px;
+  margin-left: 75px;
+  margin-top: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 7px 3px grey;
+  background-color: #6bc9c0;
+}
+
+.f1 {
+  float: left;
+  background-color: white;
+  width: 280px;
+  height: 170px;
+  margin-left: 60px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.f2 {
+  float: left;
+  background-color: white;
+  width: 280px;
+  height: 170px;
+  margin-left: 190px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.f3 {
+  float: right;
+  background-color: white;
+  width: 280px;
+  height: 170px;
+  margin-right: 80px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.stars {
+  color: red;
+}
+
+/*footer*/
+
+
+footer{
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+}
+
+@media (max-height:800px){
+footer { position: static; }
+header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+background-color: #2c292f;
+box-sizing: border-box;
+width: 100%;
+text-align: left;
+font: bold 16px sans-serif;
+padding: 50px 50px 60px 50px;
+margin-top: 0px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+display: inline-block;
+vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+width: 30%;
+}
+
+.footer-distributed h3{
+color:  #ffffff;
+font: normal 36px 'Cookie', cursive;
+margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+width: 30%;
+}
+
+.footer-distributed h3 span{
+color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+color:  #ffffff;
+margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+display:inline-block;
+line-height: 1.8;
+text-decoration: none;
+color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+color:  #8f9296;
+font-size: 14px;
+font-weight: normal;
+margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+background-color:  #33383b;
+color: #ffffff;
+font-size: 25px;
+width: 38px;
+height: 38px;
+border-radius: 50%;
+text-align: center;
+line-height: 42px;
+margin: 10px 15px;
+vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+font-size: 17px;
+line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+display: inline-block;
+color: #ffffff;
+vertical-align: middle;
+margin:0;
+}
+
+.footer-distributed .footer-center p span{
+display:block;
+font-weight: normal;
+font-size:14px;
+line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+color:  #e0ac1c;
+text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+line-height: 20px;
+color:  #92999f;
+font-size: 13px;
+font-weight: normal;
+margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+display: block;
+color:  #ffffff;
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+display: inline-block;
+width: 35px;
+height: 35px;
+cursor: pointer;
+background-color:  #33383b;
+border-radius: 2px;
+
+font-size: 20px;
+color: #ffffff;
+text-align: center;
+line-height: 35px;
+
+margin-right: 3px;
+margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+
+@media (max-width: 880px) {
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+display: block;
+width: 100%;
+margin-bottom: 40px;
+text-align: center;
+}
+
+.footer-distributed .footer-center i{
+margin-left: 0;
+}
+
+
+
+ 
