@@ -34,7 +34,9 @@ include("auth.php");
       <input type="radio" name="slider" id="close-btn">
       <ul class="nav-links">
         <label for="close-btn" class="btn close-btn"><i class="fa fa-times"></i></label>
-        <p style="font-size: 22px;"><?php echo $_SESSION['name']; ?></p>
+        <li>
+          <a href="user_details.php" style="background-color: black; color: white; "><i class='fa fa-user-circle'></i></a>
+        </li>
         <li>
           <a href="logout.php" class="desktop-item">Logout</a>
         </li>
