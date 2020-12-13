@@ -240,7 +240,7 @@ include("auth.php");
       </div>
   
       <div class="box bg2">
-        <button class="btn-prod"><a href="ip/dal/index1.php" class="prod">Dal</a></button>
+        <button class="btn-prod"><a href="ip/dal/index1.php " class="prod">Dal</a></button>
       </div>
 
       <div class="box bg3">
